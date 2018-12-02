@@ -21,7 +21,7 @@ public class ForecastController {
     private ForecastService forecastService;
 
     @GetMapping(path = "/data/{city}")
-    @ApiOperation(value = "Get 3-days forcast by city name",
+    @ApiOperation(value = "Get 3-days forecast by city name",
             response = Forecast.class)
     public ResponseEntity<Forecast> get3DayForecast(@PathVariable final String city) {
         log.info("Create 3-day forecast for: " + city);

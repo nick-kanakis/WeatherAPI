@@ -32,12 +32,12 @@ public class ExceptionHandlerController {
     protected ResponseEntity<Object> openWeatherAPIError(RestClientException e) {
         logger.error("Error while connecting to REST API", e);
         ExceptionResponse er = ExceptionResponse.builder()
-                .status(HttpStatus.SERVICE_UNAVAILABLE)
+                .status(HttpStatus.BAD_REQUEST)
                 .timestamp(LocalDateTime.now())
                 .error(e.getMessage())
                 .message("Error while connecting to REST API")
                 .build();
-        return new ResponseEntity<>(er, HttpStatus.SERVICE_UNAVAILABLE);
+        return new ResponseEntity<>(er, HttpStatus.BAD_REQUEST);
     }
 
     //handle all exceptions
