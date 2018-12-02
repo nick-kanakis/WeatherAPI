@@ -1,6 +1,6 @@
 client:
   open-weather:
-      url: 'http://api.openweathermap.org/data/2.5'
+    url: 'https://api.openweathermap.org/data/2.5/forecast'
       appId: 04f120eb03c7bb627db6912217e366d4
       units: 'metric'
 
