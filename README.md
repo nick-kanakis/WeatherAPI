@@ -54,6 +54,9 @@ Sample Response:
 
 ```
 
+**NOTE:** You can also use the wrapped maven version provided to run any maven command, simply ise ```mvnw``` instead
+of ```mvn```
+
 ## Design Decisions
 
 The application is based on the Spring Boot framework and can be separated in 3 main parts:
