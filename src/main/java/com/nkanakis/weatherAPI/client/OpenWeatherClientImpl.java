@@ -18,6 +18,10 @@ public class OpenWeatherClientImpl implements OpenWeatherClient {
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * @implNote All values are externalized in a yml file this is done to avoid any hardcoded values that may need to change
+     * in the future
+     */
     @Value("${client.open-weather.url}")
     private String openWeatherEndpoint;
 
@@ -27,6 +31,9 @@ public class OpenWeatherClientImpl implements OpenWeatherClient {
     @Value("${client.open-weather.appId}")
     private String appId;
 
+    /**
+     * @implNote URI generation is separate in it's own method in order to follow the single responsibility principle
+     */
     @Override
     public OpenWeatherForecast getForecast(String city) {
         log.info("Retrieve forecast data for: " + city);

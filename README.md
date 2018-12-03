@@ -73,6 +73,8 @@ least validates the city name provided by the user (checking for invalid charact
 ### Rest client
 Is responsible for handling the connection and unmarshalling the raw data provided by the Open Weather API.
 
+For more information please see the provided javadocs. Also for specific implementation decisions please see the corresponding
+```@ImplNote``` annotation 
 
 ## API Documentation
 

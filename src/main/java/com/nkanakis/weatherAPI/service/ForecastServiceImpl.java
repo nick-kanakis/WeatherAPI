@@ -18,6 +18,10 @@ public class ForecastServiceImpl implements ForecastService {
     @Autowired
     private StatisticsService statisticsService;
 
+    /**
+     * @implNote client communication and statistics calculation are separated and abstracted in this way
+     * we depend on an abstraction and not in a concrete implementation.
+     */
     @Override
     public Forecast get3DayForecast(String city) {
         InputValidation.cityValidation(city);
